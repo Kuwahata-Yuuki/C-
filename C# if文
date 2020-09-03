@@ -1,0 +1,27 @@
+using System;
+using System.Threading.Tasks.Dataflow;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("数字を入力してください");
+
+            int num = int.Parse(Console.ReadLine());
+
+            if (num <= 10)
+            {
+                Console.WriteLine("あなたが入力した整数は10以下です");
+            }
+            else if(num >= 11)
+            {
+                Console.WriteLine("あなた入力した整数は10以上です");
+            }
+
+
+        }
+    }
+}
