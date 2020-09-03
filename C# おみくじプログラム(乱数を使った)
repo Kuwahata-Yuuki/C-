@@ -1,0 +1,30 @@
+using System;
+using System.Threading.Tasks.Dataflow;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                Console.WriteLine("キーボードで何か入力して下さい");
+
+                int ans = int.Parse(Console.ReadLine());
+                Random r1 = new System.Random();
+
+                int num = r1.Next(0, 3);//0から2
+
+                switch (num)
+                {
+                    case 0: Console.WriteLine("大吉"); break;
+                    case 1: Console.WriteLine("中吉"); break;
+                    case 2: Console.WriteLine("吉"); break;
+
+                }
+
+            }
+        }
+    }
+}
