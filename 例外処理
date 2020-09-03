@@ -1,0 +1,30 @@
+using System;
+using System.Security.Authentication;
+using System.Threading.Tasks.Dataflow;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            Console.WriteLine("整数を入力してください");
+
+            try
+            {
+                int num = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("整数" + num + "が入力されました");
+
+            }catch(Exception e)
+            {
+                Console.WriteLine("整数以外を入力しないでください");
+            }
+
+
+
+        }
+    }
+}
