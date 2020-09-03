@@ -1,0 +1,22 @@
+using System;
+using System.Security.Authentication;
+using System.Threading.Tasks.Dataflow;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            int[,] num = new int[3,5];
+
+            num[2, 4] = 5;
+
+            
+
+            Console.WriteLine("二次元配列numの3番目の配列の中の配列の5番目の配列の中には" + num[2,4] + "が入っている");
+        }
+    }
+}
