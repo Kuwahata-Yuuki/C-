@@ -1,0 +1,45 @@
+using System;
+using System.Threading.Tasks.Dataflow;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int tmp = 0;
+
+            Console.WriteLine("5教科のテストの点数を入力してください");
+
+            int[] test = new int[5];
+
+            for(int x=0; x<5; x++)
+            {
+                test[x] = int.Parse(Console.ReadLine());
+            }
+
+
+            Console.WriteLine("テストの点数を大きい順に出力します");
+
+            for(int i=0; i<test.Length-1; i++)
+            {
+                for(int j=i+1; j<test.Length; j++)
+                {
+                    if(test[i] < test[j])
+                    {
+                        tmp = test[i];
+                        test[i] = test[j];
+                        test[j] = tmp;
+                    }
+                }
+            }
+
+            foreach(int ftest in test)
+            {
+                Console.WriteLine(ftest);
+            }
+
+
+        }
+    }
+}
