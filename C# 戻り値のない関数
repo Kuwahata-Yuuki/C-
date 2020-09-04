@@ -1,0 +1,44 @@
+using System;
+using System.Security.Authentication;
+using System.Threading.Tasks.Dataflow;
+
+namespace ConsoleApp4
+
+
+{ 
+
+   
+    class Program
+    {
+
+       static void setName(string x)
+        {
+
+            string name = x;
+
+            if(x == "ゆうき")
+            {
+                Console.WriteLine("管理者様、お疲れ様です");
+            }
+            else
+            {
+                Console.WriteLine("ゲスト様、いらっしゃいませ");
+            }
+
+        }
+
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("お名前を入力してください");
+
+            string name = Console.ReadLine();
+
+            setName(name);
+
+
+           
+        }
+    }
+}
