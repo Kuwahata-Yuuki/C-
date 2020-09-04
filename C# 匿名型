@@ -7,11 +7,7 @@ namespace ConsoleApp4
 
 { 
 
-    enum Month : int
-    {
-        January = 1,February, March,April,May, June, july, August,September,October,November,December
-    }
-
+   
     class Program
     {
         static void Main(string[] args)
