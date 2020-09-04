@@ -1,0 +1,28 @@
+using System;
+using System.Security.Authentication;
+using System.Threading.Tasks.Dataflow;
+
+namespace ConsoleApp4
+
+
+{ 
+
+    enum Month : int
+    {
+        January = 1,February, March,April,May, June, july, August,September,October,November,December
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            for(int i=1; i<12; ++i)
+            {
+                Console.WriteLine($"{i}月 {(Month)i}");
+            }
+
+
+        }
+    }
+}
