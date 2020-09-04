@@ -1,0 +1,27 @@
+#using System;
+using System.Security.Authentication;
+using System.Threading.Tasks.Dataflow;
+
+namespace ConsoleApp4
+
+
+{ 
+
+   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var t = (1, 2, "foo");
+            var (x, y, z) = t;  //タプルの分解宣言(すべての変数で型推論)
+              
+            (var x2, long y2, var z2) = t;
+
+            long p, q; string r;
+
+            (p, q, r) = t; //タプルの代入
+
+            Console.WriteLine(t);
+        }
+    }
+}
