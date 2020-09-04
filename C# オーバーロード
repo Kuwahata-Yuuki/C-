@@ -1,0 +1,47 @@
+using System;
+using System.Security.Authentication;
+using System.Threading.Tasks.Dataflow;
+
+namespace ConsoleApp4
+
+
+{ 
+
+   
+    class Program
+    {
+
+       static void Status(string x)
+        {
+           string name = x;
+
+            Console.WriteLine(name + "さん、いらっしゃい");
+        }
+
+        static void Status(int x)
+        {
+            int age = x;
+
+            Console.WriteLine("あなたの年齢は" + age + "です。");
+        }
+
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("名前を入力してください");
+
+            string name = Console.ReadLine();
+
+            Console.WriteLine("年齢を入力してください");
+
+            int age = int.Parse(Console.ReadLine());
+
+            Status(name);
+            Status(age);
+           
+
+           
+        }
+    }
+}
