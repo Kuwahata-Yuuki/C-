@@ -1,0 +1,20 @@
+using System;
+using System.Security.Authentication;
+using System.Threading.Tasks.Dataflow;
+
+namespace ConsoleApp4
+
+
+{ 
+
+   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            (int level, string title) p = (12, "A");
+            Console.WriteLine(p.title);
+        }
+    }
+}
