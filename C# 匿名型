@@ -1,0 +1,27 @@
+using System;
+using System.Security.Authentication;
+using System.Threading.Tasks.Dataflow;
+
+namespace ConsoleApp4
+
+
+{ 
+
+    enum Month : int
+    {
+        January = 1,February, March,April,May, June, july, August,September,October,November,December
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            var x = new { Title = "V", Level = 12 };
+
+            Console.WriteLine($"{x.Level}:{x.Title}");
+
+
+        }
+    }
+}
