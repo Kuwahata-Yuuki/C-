@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Security.Authentication;
+using System.Security.Cryptography;
+using System.Threading.Tasks.Dataflow;
+
+
+namespace ConsoleApp4
+
+
+{
+
+
+   partial class Program
+    {
+
+        static void Main(String[] args)
+        {
+
+            OnBeginProgram();
+            Console.WriteLine("こんにちは");
+            OnEndProgram();
+
+        }
+
+        /*部分メソッド(partial)
+        この状態でプログラムをコンパイル、実行すると、「こんにちは」の文字だけが表示される。
+        OnBeginProgram,OnEndProgramのメソッドは呼び出されない。
+        また、OnBeginProgram,OnEndProgramのメソッド呼び出しがコンパイル後の実行ファイルから
+        きれいさっぱり消える。
+        */
+
+        static partial void OnBeginProgram();
+        static partial void OnEndProgram();
+    }
+}
