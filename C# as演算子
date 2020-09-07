@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Security.Authentication;
+using System.Security.Cryptography;
+using System.Threading.Tasks.Dataflow;
+
+
+namespace ConsoleApp4
+
+
+{
+
+
+    partial class Program
+    {
+
+        static void Main(String[] args)
+        {
+
+            Sub s1 = new Sub2();
+            Sub2 s2;
+
+            s2 = s1 as Sub2;
+
+            if(s2 != null)
+            {
+                Console.WriteLine("型変換できます。");
+            }
+            else
+            {
+                Console.WriteLine("型変換できませんのでnullが入ります");
+            }
+
+
+
+
+
+        }
+    }
+    
+}
