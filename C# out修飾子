@@ -1,0 +1,25 @@
+using System;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int a;
+            Test(out a); //outを使った場合、変数を初期化しなくてもよい
+                         //ref同様、参照渡しになる
+            Console.Write(a);
+
+
+
+        }
+
+        static void Test(out int a)
+        {
+            a = 10; //outを使った場合、メソッド内で必ず値を代入しなければならない
+        }
+    }
+
+}
