@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.IO.Pipes;
+using System.Reflection.Metadata.Ecma335;
+using System.Security.Authentication;
+using System.Security.Cryptography;
+using System.Threading.Tasks.Dataflow;
+
+
+namespace ConsoleApp4
+
+
+{
+
+   
+
+
+    partial class Program
+    {
+
+        const int height = 8;
+        const int weight = 8;
+
+       static int coursol1 = 0;
+        static int coursol2 = 0;
+
+       static int[][] cell = new int[height][];
+
+
+        static void Main(String[] args)
+        {
+
+          while (true)
+            {
+                Console.Clear();
+                 for (int y = 0; y < height; y++)
+                {
+                    for (int x = 0; x < weight; x++)
+                    {
+
+                        if (coursol1 == x && coursol2 == y)
+                        {
+                            Console.Write("◎");
+                        }
+                       
+                        else
+                        {
+                            Console.Write("・");
+                        }
+                    }
+                    Console.Write("\n");
+                }
+
+                var keyinfo = Console.ReadKey(true);
+                switch (keyinfo.Key)
+                {
+                    case ConsoleKey.W:
+                        coursol2--; break;
+                    case ConsoleKey.S:
+                        coursol2++; break;
+                    case ConsoleKey.A:
+                        coursol1--; break;
+                    case ConsoleKey.D:
+                        coursol1++; break;
+                }
+
+            
+
+            }
+
+        
+
+        }
+
+
+    }
+    
+}
