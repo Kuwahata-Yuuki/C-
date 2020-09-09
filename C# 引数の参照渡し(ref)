@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
+using System.Security.Authentication;
+using System.Security.Cryptography;
+using System.Threading.Tasks.Dataflow;
+
+
+namespace ConsoleApp4
+
+
+{
+
+
+    partial class Program
+    {
+
+        static void Main(String[] args)
+        {
+
+            int a = 100;
+
+            Console.Write(a + "⇒");
+
+            Test(ref a);
+            Console.WriteLine(a);
+        }
+
+        static void Test(ref int a)
+        {
+            a = 10; //メソッド内で値を書き換える。
+        }
+
+    }
+    
+}
