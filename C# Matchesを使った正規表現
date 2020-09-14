@@ -1,0 +1,31 @@
+using System;
+using System.Threading;
+using System.Text.RegularExpressions;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("自己紹介をしてください");
+
+            String[] str = { "名前", "年齢", "趣味" };
+            int count = 0;
+
+            String ans = Console.ReadLine();
+
+            MatchCollection result = Regex.Matches(ans, "ゆうき|23歳|サッカー");
+             foreach (Match m in result)
+             {
+
+                 Console.WriteLine(str[count++]+m);
+
+             }
+
+           
+
+        }
+    }
+}
