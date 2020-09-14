@@ -1,0 +1,26 @@
+using System;
+using System.Threading;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("私の好きな食べ物は何でしょう？");
+
+            String ans = Console.ReadLine();
+
+            if (ans.Contains("イチゴ"))
+            {
+                Console.WriteLine("正解です");
+            }
+            else
+            {
+                Console.WriteLine("不正解です");
+            }
+
+        }
+    }
+}
